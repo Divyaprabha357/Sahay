@@ -7,12 +7,16 @@ body {
     align-items: center;
     font-family: Arial, sans-serif;
 }
-
+.container{
+    display: flex;
+    align-items: flex-start;
+}
 .signin-box {
     background: white;
     padding: 40px;
-    width: 320px;
+    width: 900px;
     border-radius: 12px;
+    align-self: left;
     text-align: center;
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
@@ -20,7 +24,7 @@ body {
 input {
     width: 90%;
     padding: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 19px;
 }
 
 button {
