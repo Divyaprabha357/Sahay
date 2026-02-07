@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3d59, #3a7ca5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.signin-box {
+    background: white;
+    padding: 40px;
+    width: 320px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #1e3d59;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.secondary {
+    background: #777;
+}
+
+#error {
+    color: red;
+    font-size: 14px;
+}
+a:link{
+    color:#000000
+}
+a:link{
+    color:skyblue
+}
+a:visited{
+    color:skyblue
+}
