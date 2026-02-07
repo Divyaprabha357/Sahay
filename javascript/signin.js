@@ -1,45 +1,41 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { 
-    getAuth, 
-    signInWithEmailAndPassword, 
-    createUserWithEmailAndPassword 
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+function signIn() {
+    const name = document.getElementById("fullName").value.trim();
+    const phone = document.getElementById("number").value.trim();
+    const location = document.getElementById("location").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-const firebaseConfig = {
-    apiKey: "AIzaSyB3uA91RM3XpGaD6nI9J9-vjLJTr9v_n7A",
-    authDomain: "living-labs-hack.firebaseapp.com",
-    projectId: "living-labs-hack",
-    storageBucket: "living-labs-hack.firebasestorage.app",
-    messagingSenderId: "721315419723",
-    appId: "1:721315419723:web:5c06495ee913c9eb1ddfce",
-    measurementId: "G-VHSERM637D"
-};
+    const error = document.getElementById("error");
+    error.style.color = "red";
+    error.innerText = "";
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+    if (!name || !phone || !location || !email || !password) {
+        error.innerText = " Please fill in all fields";
+        return;
+    }
 
-window.signIn = function () {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    if (phone.length < 10) {
+        error.innerText = "Enter a valid phone number!";
+        return;
+    }
 
-    signInWithEmailAndPassword(auth, email, password)
-        .then(() => {
-            window.location.href = "index.html"; 
-        })
-        .catch(error => {
-            document.getElementById("error").innerText = error.message;
-        });
-};
+    if (password.length < 6) {
+        error.innerText = "Password must be at least 6 characters!";
+        return;
+    }
 
-window.signUp = function () {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    error.style.color = "green";
+    error.innerText = "!Login successful! Redirecting...";
 
-    createUserWithEmailAndPassword(auth, email, password)
-        .then(() => {
-            alert("Account created successfully!");
-        })
-        .catch(error => {
-            document.getElementById("error").innerText = error.message;
-        });
-};
+    console.log({
+        name,
+        phone,
+        location,
+        email,
+        password
+    });
+
+    setTimeout(() => {
+        window.location.href = "/";
+    }, 1500);
+}
