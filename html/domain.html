@@ -8,19 +8,22 @@
 <body>
 
 <header>
-    <h1>Sahay</h1>
+    <div class="logo-title">
+            <img src="/images/logo.png" alt="CivicBridge Logo" class="logo" style="width:80px;height:80px">
+        <div class = "fonts__">
+            <h1 style = "font-size:30px;">Sahay</h1>
+            <h4>From Local Needs to Campus Action</h4>
+        </div>
+    </div>
     <nav>
-        <a href="#about">What is a Living Lab?</a>
-        <a href="#challenges">Challenges</a>
-        <a href="#how">How It Works</a>
-        <a href="#community">Community</a>
-        <a href="#impact">Impact</a>
-        <a href="#resources">Resources</a>
-        <a href="#join">Join the Lab</a>
+        <a href="/index.html">HOME</a>
+        <a href="college.html">Partnered Colleges</a>
+        <a href="ngo.html">Partnered NGOs</a>
+        <a href="domain.html">Join the Lab</a>
     </nav>
 
-
-</header><div class="center"
+</header>
+<div class="center"
 <br><br><h1>Select your Domain</h1>
 <section class="domains-container">
     <a href="signin.html">
@@ -29,32 +32,41 @@
     </div>
     </a>
 
-    <div class="domain-card" onclick="showInfo('health')">
+    <a href="signin.html">
+    <div class="domain-card" href="signin.html">
         <h2>Healthcare</h2>
     </div>
+    </a>
 
-    <div class="domain-card" onclick="showInfo('environment')">
+    <a href="signin.html">
+    <div class="domain-card" href="signin.html">
         <h2>Environment</h2>
     </div>
-
-    <div class="domain-card" onclick="showInfo('social')">
+    </a>
+    <a href="signin.html">
+    <div class="domain-card" href="signin.html">
         <h2>Social Help</h2>
     </div>
-
-    <div class="domain-card" onclick="showInfo('animal')">
+    </a>
+    <a href="signin.html">
+    <div class="domain-card" href="signin.html">
         <h2>Animal Rescue and Shelter</h2>
     </div>
+    </a>
 
-    <div class="domain-card" onclick="showInfo('disaster')">
+    <a href="signin.html">
+    <div class="domain-card" href="signin.html">
         <h2>Disaster Relief</h2>
     </div>
+    </a>
     
-        <div class="domain-card" onclick="showInfo('other')">
+         <a href="signin.html">
+    <div class="domain-card" href="signin.html">
         <h2>Other</h2>
     </div>
+         </a>
 </section>
 
-<!-- Info Box -->
 <div id="infoBox" class="info-box">
     <span onclick="closeInfo()">✖</span>
     <p id="infoText"></p>
@@ -63,4 +75,3 @@
 <script src="/javascript/domain.js"></script>
 </body>
 </html>
-
